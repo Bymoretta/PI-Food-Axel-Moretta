@@ -23,8 +23,7 @@ module.exports = (sequelize) => {
     },
 
     steps: {
-      type: DataTypes.ARRAY(DataTypes.JSON),
-      allowNull: false,    // pasos del plato
+      type: DataTypes.TEXT  // pasos del plato
     },
 
     score: {

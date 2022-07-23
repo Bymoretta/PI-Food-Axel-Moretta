@@ -24,5 +24,9 @@ const { conn } = require('./src/db.js');
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
+    const dietas = ["gluten free","paleolithic", "vegetarian", "lacto ovo vegetarian","vegan","pescatarian","primal","whole 30", "fodmap friendly","dairyFree"];
+    dietas.forEach(async (element) => await Diet.create({name: element}));
+ 
+console.log('Tipos de dieta pre-cargadas')
   });
 });
